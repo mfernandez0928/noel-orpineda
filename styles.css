@@ -5,32 +5,20 @@
   --font-poppins: "Poppins", sans-serif;
 
   --color-primary: #1e3a8a;
-  --color-accent: #00d2ff;
-  --color-gold: #fbbf24;
+  --color-accent: #fbbf24;
+  --color-cyan: #00d2ff;
 }
 
 @layer utilities {
   .btn-enroll {
-    @apply bg-primary text-white hover:bg-accent transition-all duration-300 transform hover:-translate-y-1 active:scale-95;
+    background: linear-gradient(135deg, #1e3a8a 0%, #00d2ff 100%);
+    @apply text-white transition-all duration-300 transform hover:-translate-y-1 active:scale-95;
+  }
+  .btn-enroll:hover {
+    box-shadow: 0 10px 20px -5px rgba(30, 58, 138, 0.4);
   }
   .glass-card {
     @apply bg-white/80 backdrop-blur-md border border-slate-100 shadow-xl;
-  }
-  .modal-step {
-    @apply transition-all duration-500 ease-in-out;
-  }
-  .animate-fade-in {
-    animation: fadeIn 0.5s ease-out forwards;
-  }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 }
 
