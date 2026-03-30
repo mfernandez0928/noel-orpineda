@@ -3,6 +3,35 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-poppins: "Poppins", sans-serif;
+
+  --color-primary: #1e3a8a;
+  --color-accent: #00d2ff;
+  --color-gold: #fbbf24;
+}
+
+@layer utilities {
+  .btn-enroll {
+    @apply bg-primary text-white hover:bg-accent transition-all duration-300 transform hover:-translate-y-1 active:scale-95;
+  }
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-slate-100 shadow-xl;
+  }
+  .modal-step {
+    @apply transition-all duration-500 ease-in-out;
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 :root {
@@ -22,43 +51,23 @@ body {
   overflow-x: hidden;
 }
 
-.bg-royal { background-color: var(--royal-blue); }
-.text-royal { color: var(--royal-blue); }
-.bg-amber { background-color: var(--amber-gold); }
-.text-amber { color: var(--amber-gold); }
-.bg-cyan { background-color: var(--cyan-accent); }
-.text-cyan { color: var(--cyan-accent); }
-
-.btn-enroll {
+.bg-royal {
   background-color: var(--royal-blue);
-  color: white;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  box-shadow: 0 4px 14px 0 rgba(30, 58, 138, 0.2);
-  position: relative;
-  z-index: 1;
 }
-
-.btn-enroll::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, var(--royal-blue), #2563eb);
-  z-index: -1;
-  transition: opacity 0.4s ease;
-  border-radius: inherit;
-  opacity: 0;
+.text-royal {
+  color: var(--royal-blue);
 }
-
-.btn-enroll:hover::before {
-  opacity: 1;
+.bg-amber {
+  background-color: var(--amber-gold);
 }
-
-.btn-enroll:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+.text-amber {
+  color: var(--amber-gold);
+}
+.bg-cyan {
+  background-color: var(--cyan-accent);
+}
+.text-cyan {
+  color: var(--cyan-accent);
 }
 
 .broker-card {
