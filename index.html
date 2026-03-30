@@ -83,7 +83,7 @@
           Signals.
         </p>
         <div
-          class="flex flex-col sm:flex-row items-center justify-center gap-6"
+          class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-6"
         >
           <button
             class="open-modal-btn btn-enroll px-12 py-6 rounded-2xl font-bold uppercase tracking-[0.2em] text-sm w-full sm:w-auto"
@@ -91,10 +91,19 @@
             JOIN THE ACADEMY
           </button>
           <a
-            href="#reviews"
-            class="px-12 py-6 text-primary font-bold uppercase tracking-[0.2em] text-sm hover:text-accent transition-colors"
-            >View Member Proof</a
+            href="https://www.facebook.com/NoelPvPrimeverse"
+            target="_blank"
+            class="px-12 py-6 border-2 border-primary text-primary rounded-2xl font-bold uppercase tracking-[0.2em] text-sm hover:bg-primary hover:text-white transition-all w-full sm:w-auto text-center"
+            >Contact Me</a
           >
+        </div>
+        <div class="flex justify-center">
+          <button
+            id="open-skool-btn"
+            class="px-12 py-6 bg-accent text-white rounded-2xl font-bold uppercase tracking-[0.2em] text-sm hover:bg-primary transition-all w-full sm:w-auto shadow-xl"
+          >
+            Join our Skool of VIP
+          </button>
         </div>
       </div>
     </section>
@@ -415,6 +424,92 @@
     </div>
 
     <div
+      id="skool-modal"
+      class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm"
+    >
+      <div
+        class="bg-white w-full max-w-2xl rounded-[2.5rem] shadow-2xl overflow-hidden relative"
+      >
+        <button
+          id="close-skool-modal"
+          class="absolute top-8 right-8 text-slate-400 hover:text-primary z-10"
+        >
+          <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+        <div class="p-8 md:p-12">
+          <h2
+            class="text-2xl md:text-3xl font-poppins font-extrabold text-primary mb-6 leading-tight"
+          >
+            HOW TO JOIN OUR <span class="text-accent">QUANTUM VIP GC?</span>
+          </h2>
+
+          <div class="space-y-4 mb-8">
+            <p class="text-slate-600 font-medium">
+              Get the link from your referrer or use this if it's Coach Lee
+            </p>
+            <p class="text-xl font-bold text-accent">
+              Only $49 or P2800++ per month.
+            </p>
+          </div>
+
+          <div class="bg-slate-50 rounded-3xl p-6 md:p-8 mb-8">
+            <h3 class="font-bold text-primary mb-4">
+              💎 VIP – Skool of Traders
+            </h3>
+            <ul class="space-y-3 text-sm text-slate-600">
+              <li class="flex items-start gap-3">
+                <span class="text-green-500">✔️</span>
+                <span>US30 New York live trading</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500">✔️</span>
+                <span>Gold live trading</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500">✔️</span>
+                <span>Full Tagalog mentorship</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500">✔️</span>
+                <span>Coach Lee sessions</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500">✔️</span>
+                <span>Mastery programs & events</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500">✔️</span>
+                <span>Market Insights and Intraday signals</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500">✔️</span>
+                <span>Exclusive VIP signals</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500">✔️</span>
+                <span>Access to Skool recordings of Mentoring Sessions</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="text-center space-y-6">
+            <p class="font-bold text-primary">👉 Join VIP →</p>
+            <a
+              href="https://www.skool.com/skooloftraders/about?ref=33294491eb434a318a6269568d85ce60"
+              target="_blank"
+              class="btn-enroll block w-full py-5 rounded-2xl font-bold uppercase tracking-widest text-xs shadow-lg"
+            >
+              JOIN SKOOL OF TRADERS
+            </a>
+            <p class="text-slate-400 font-medium italic">
+              Let’s fly high and trade smart, Quantum Fam! ✈️💼
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
       id="application-modal"
       class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm"
     >
@@ -467,6 +562,10 @@
               >
             </div>
           </div>
+          <p class="text-xs text-slate-500 mb-8 text-center font-medium">
+            Once your done registering on the broker please send a screenshot
+            confirming that you already have register
+          </p>
           <button
             id="next-to-step-2"
             class="btn-enroll w-full py-5 rounded-2xl font-bold uppercase tracking-widest text-xs"
@@ -535,29 +634,19 @@
           <h2 class="text-3xl font-poppins font-extrabold text-primary mb-4">
             Access Granted!
           </h2>
-          <p class="text-slate-500 mb-10">
-            Your application has been received. Complete the final steps to
-            enter the academy.
+          <p class="text-slate-500 mb-8">
+            Since you already created the broker account and submitted your
+            details, please message me for the final last step.
           </p>
           <div class="space-y-4">
             <a
-              href="https://forms.gle/EVW1inzJ9S2FydRb7"
+              href="https://m.me/NoelPvPrimeverse"
               target="_blank"
-              class="block p-4 rounded-xl bg-slate-50 border hover:border-primary font-bold text-slate-700 transition-all"
-              >1. Google Form Registration</a
+              class="flex items-center justify-center gap-3 w-full py-5 rounded-2xl bg-[#0084FF] text-white font-bold uppercase tracking-widest text-xs hover:bg-[#0077E6] transition-all shadow-lg"
             >
-            <a
-              href="https://prime-verse.mn.co/plans/1932009"
-              target="_blank"
-              class="block p-4 rounded-xl bg-slate-50 border hover:border-primary font-bold text-slate-700 transition-all"
-              >2. Join Mighty Networks</a
-            >
-            <a
-              href="https://m.me/ch/AbaWanTuJ_NQ-823/"
-              target="_blank"
-              class="block p-4 rounded-xl bg-slate-50 border hover:border-primary font-bold text-slate-700 transition-all"
-              >3. Join Group Chat</a
-            >
+              <i class="fa-brands fa-facebook-messenger text-xl"></i>
+              MESSAGE ME ON MESSENGER
+            </a>
           </div>
           <button
             id="success-close"
@@ -612,6 +701,21 @@
       document.getElementById("next-to-step-2").onclick = () => {
         step1.classList.add("hidden");
         step2.classList.remove("hidden");
+      };
+
+      // Skool Modal Logic
+      const skoolModal = document.getElementById("skool-modal");
+      const openSkoolBtn = document.getElementById("open-skool-btn");
+      const closeSkoolBtn = document.getElementById("close-skool-modal");
+
+      openSkoolBtn.onclick = () => {
+        skoolModal.classList.remove("hidden");
+        skoolModal.classList.add("flex");
+      };
+
+      closeSkoolBtn.onclick = () => {
+        skoolModal.classList.add("hidden");
+        skoolModal.classList.remove("flex");
       };
 
       // Form Submission to Google Sheet
