@@ -474,20 +474,157 @@
             I HAVE CREATED MY ACCOUNT
           </button>
         </div>
+
+        <div id="modal-step-2" class="p-8 md:p-12 hidden">
+          <span
+            class="inline-block px-4 py-1.5 bg-blue-50 text-primary text-[10px] font-bold uppercase tracking-widest rounded-full mb-4"
+            >Step 02/03</span
+          >
+          <h2 class="text-3xl font-poppins font-extrabold text-primary mb-8">
+            Initiate Protocol
+          </h2>
+          <form id="application-form" class="space-y-6">
+            <input
+              type="text"
+              name="name"
+              required
+              placeholder="Full Name"
+              class="w-full px-6 py-4 rounded-2xl bg-slate-50 border-2 border-slate-100 outline-none focus:border-primary"
+            />
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Email Address"
+              class="w-full px-6 py-4 rounded-2xl bg-slate-50 border-2 border-slate-100 outline-none focus:border-primary"
+            />
+            <select
+              name="broker"
+              required
+              class="w-full px-6 py-4 rounded-2xl bg-slate-50 border-2 border-slate-100 outline-none focus:border-primary"
+            >
+              <option value="">Select Broker</option>
+              <option value="VT Markets">VT Markets</option>
+              <option value="PU Prime">PU Prime</option>
+            </select>
+            <select
+              name="capital"
+              required
+              class="w-full px-6 py-4 rounded-2xl bg-slate-50 border-2 border-slate-100 outline-none focus:border-primary"
+            >
+              <option value="">Starting Capital</option>
+              <option value="50-100">$50-$100</option>
+              <option value="101-500">$101-$500</option>
+              <option value="501+">$501+</option>
+            </select>
+            <button
+              type="submit"
+              class="btn-enroll w-full py-5 rounded-2xl font-bold uppercase tracking-widest text-xs"
+            >
+              SUBMIT APPLICATION
+            </button>
+          </form>
+        </div>
+
+        <div id="modal-step-3" class="p-8 md:p-12 hidden text-center">
+          <div
+            class="w-20 h-20 bg-green-50 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
+          >
+            <i class="fa-solid fa-check text-3xl"></i>
+          </div>
+          <h2 class="text-3xl font-poppins font-extrabold text-primary mb-4">
+            Access Granted!
+          </h2>
+          <p class="text-slate-500 mb-10">
+            Your application has been received. Complete the final steps to
+            enter the academy.
+          </p>
+          <div class="space-y-4">
+            <a
+              href="https://forms.gle/EVW1inzJ9S2FydRb7"
+              target="_blank"
+              class="block p-4 rounded-xl bg-slate-50 border hover:border-primary font-bold text-slate-700 transition-all"
+              >1. Google Form Registration</a
+            >
+            <a
+              href="https://prime-verse.mn.co/plans/1932009"
+              target="_blank"
+              class="block p-4 rounded-xl bg-slate-50 border hover:border-primary font-bold text-slate-700 transition-all"
+              >2. Join Mighty Networks</a
+            >
+            <a
+              href="https://m.me/ch/AbaWanTuJ_NQ-823/"
+              target="_blank"
+              class="block p-4 rounded-xl bg-slate-50 border hover:border-primary font-bold text-slate-700 transition-all"
+              >3. Join Group Chat</a
+            >
+          </div>
+          <button
+            id="success-close"
+            class="mt-8 text-xs font-bold text-slate-400 uppercase tracking-widest hover:text-primary transition-colors"
+          >
+            Return to Academy
+          </button>
+        </div>
       </div>
     </div>
 
     <script>
       // Existing Modal Logic
       const modal = document.getElementById("application-modal");
+      const step1 = document.getElementById("modal-step-1");
+      const step2 = document.getElementById("modal-step-2");
+      const step3 = document.getElementById("modal-step-3");
+      const form = document.getElementById("application-form");
+
       document.querySelectorAll(".open-modal-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
           modal.classList.remove("hidden");
           modal.classList.add("flex");
+          // Reset to step 1
+          step1.classList.remove("hidden");
+          step2.classList.add("hidden");
+          step3.classList.add("hidden");
         });
       });
+
       document.getElementById("close-modal").onclick = () =>
         modal.classList.add("hidden");
+
+      document.getElementById("success-close").onclick = () =>
+        modal.classList.add("hidden");
+
+      // Step Transitions
+      document.getElementById("next-to-step-2").onclick = () => {
+        step1.classList.add("hidden");
+        step2.classList.remove("hidden");
+      };
+
+      // Form Submission to Google Sheet
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.innerText = "SENDING...";
+
+        const scriptURL =
+          "https://script.google.com/macros/s/AKfycbxuBAX7MYg-dVoHHOxNPLUqM8gg2-Jfg0MDvmSdDSpYfSJlNEJJ-13v6tyTuGmm-rFiLw/exec";
+        const formData = new FormData(form);
+
+        fetch(scriptURL, { method: "POST", body: formData, mode: "no-cors" })
+          .then(() => {
+            step2.classList.add("hidden");
+            step3.classList.remove("hidden");
+          })
+          .catch((error) => {
+            console.error("Error!", error.message);
+            alert(
+              "There was an error submitting your application. Please try again.",
+            );
+            submitBtn.disabled = false;
+            submitBtn.innerText = "SUBMIT APPLICATION";
+          });
+      });
 
       // LIGHTBOX LOGIC
       function openLightbox(src) {
