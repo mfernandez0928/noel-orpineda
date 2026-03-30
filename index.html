@@ -4,31 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noel Orpineda | Quantum Family Academy</title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://picsum.photos/seed/trading/32/32"
-    />
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
-    <!-- Styles -->
     <link rel="stylesheet" href="/styles.css" />
+
+    <style>
+      /* Smooth transition para sa Lightbox */
+      #lightbox.flex {
+        display: flex;
+        animation: fadeIn 0.3s ease;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
   </head>
-  <body class="bg-white font-sans text-slate-900 overflow-x-hidden">
-    <!-- Header -->
+
+  <body class="bg-white font-inter text-slate-900 overflow-x-hidden">
     <header
       class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100"
     >
@@ -38,12 +44,8 @@
         <div
           class="text-2xl font-poppins font-extrabold text-primary tracking-tight"
         >
-          <span
-            class="font-poppins font-extrabold text-2xl tracking-tight text-[#1e3a8a]"
-            >NOEL <span class="text-[#fbbf24]">ORPINEDA</span></span
-          >
+          NOEL <span class="text-accent">ORPINEDA</span>
         </div>
-
         <div class="flex items-center gap-6">
           <a
             href="https://www.facebook.com/NoelPvPrimeverse"
@@ -53,7 +55,7 @@
             <i class="fa-brands fa-facebook text-2xl"></i>
           </a>
           <button
-            class="open-modal hidden md:block px-6 py-2.5 bg-primary text-white rounded-full font-bold text-sm uppercase tracking-widest hover:bg-accent transition-all"
+            class="open-modal-btn hidden md:block px-6 py-2.5 bg-primary text-white rounded-full font-bold text-sm uppercase tracking-widest hover:bg-accent transition-all"
           >
             Join Now
           </button>
@@ -61,223 +63,315 @@
       </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="relative pt-40 pb-24 md:pt-56 md:pb-40 overflow-hidden">
-      <!-- Decorative Background -->
-      <div
-        class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[800px] h-[800px] bg-blue-50 rounded-full blur-3xl opacity-50 -z-10"
-      ></div>
-      <div
-        class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[600px] h-[600px] bg-cyan-50 rounded-full blur-3xl opacity-50 -z-10"
-      ></div>
-
       <div class="max-w-7xl mx-auto px-6 text-center">
         <span
-          class="inline-block px-5 py-2 bg-blue-50 text-[#1e3a8a] text-[10px] font-bold uppercase tracking-[0.3em] rounded-full mb-8 border border-blue-100"
+          class="inline-block px-5 py-2 bg-blue-50 text-primary text-[10px] font-bold uppercase tracking-[0.3em] rounded-full mb-8 border border-blue-100"
           >Quantum Family Academy</span
         >
         <h1
-          class="text-6xl md:text-8xl font-poppins font-extrabold text-[#1e3a8a] mb-10 leading-[1.1] tracking-tight"
+          class="text-6xl md:text-8xl font-poppins font-extrabold text-primary mb-10 leading-[1.1] tracking-tight"
         >
-          Join the <span class="text-[#fbbf24]">Quantum</span>
-          <br class="hidden md:block" />
-          <span class="text-[#00d2ff]">Family</span>.
+          Join the <span class="text-accent">Quantum</span
+          ><br class="hidden md:block" />
+          <span class="text-cyan">Family</span>.
         </h1>
         <p
-          class="text-slate-500 text-lg md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed font-medium animate-fade-in"
-          style="animation-delay: 0.2s"
+          class="text-slate-500 text-lg md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed font-medium"
         >
           Trade Smart, Live Free. Get 100% FREE Access to Academy, AI Tools, and
           Signals.
         </p>
-
         <div
-          class="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in"
-          style="animation-delay: 0.4s"
+          class="flex flex-col sm:flex-row items-center justify-center gap-6"
         >
           <button
-            class="open-modal btn-enroll px-12 py-6 rounded-2xl font-bold uppercase tracking-[0.2em] text-sm shadow-2xl shadow-blue-900/20 w-full sm:w-auto"
+            class="open-modal-btn btn-enroll px-12 py-6 rounded-2xl font-bold uppercase tracking-[0.2em] text-sm w-full sm:w-auto"
           >
             JOIN THE ACADEMY
           </button>
           <a
             href="#reviews"
             class="px-12 py-6 text-primary font-bold uppercase tracking-[0.2em] text-sm hover:text-accent transition-colors"
+            >View Member Proof</a
           >
-            View Member Proof
-          </a>
         </div>
       </div>
     </section>
 
-    <!-- Member Reviews (Community Feed Style) -->
     <section id="reviews" class="py-24 bg-slate-50/50">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16">
           <h2
             class="text-3xl md:text-5xl font-poppins font-extrabold text-primary mb-6"
           >
-            Member Reviews
+            Community Results & Meetups
           </h2>
-          <p class="text-slate-500 text-lg">
-            Real results from our growing community of traders.
+          <p class="text-slate-500 text-lg text-center mx-auto max-w-2xl">
+            Real wins and real connections. See how the Quantum Family thrives
+            together.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <!-- Card 1 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div
-            class="bg-white rounded-3xl p-6 shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col"
+            class="group bg-white p-3 rounded-3xl shadow-md hover:shadow-xl transition-all cursor-pointer border border-slate-100"
+            onclick="openLightbox('assets/results/1.jpg')"
           >
-            <div class="flex items-center gap-4 mb-6">
-              <img
-                src="https://picsum.photos/seed/user1/100/100"
-                alt="User"
-                class="w-12 h-12 rounded-full object-cover border-2 border-blue-50"
-              />
-              <div>
-                <h4 class="font-bold text-primary">Juan Dela Cruz</h4>
-                <p
-                  class="text-[10px] text-slate-400 font-bold uppercase tracking-widest"
-                >
-                  March 28, 2026
-                </p>
-              </div>
-            </div>
             <div
-              class="aspect-video rounded-2xl overflow-hidden mb-6 bg-slate-100 relative group"
+              class="relative overflow-hidden rounded-2xl bg-slate-900 aspect-[3/4] flex items-center justify-center"
             >
               <img
-                src="https://picsum.photos/seed/chart1/600/400"
-                alt="Trade"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src="assets/results/1.jpg"
+                alt="Result"
+                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
               />
               <div
-                class="absolute top-4 right-4 px-3 py-1 bg-green-500 text-white text-[10px] font-bold rounded-full shadow-lg"
+                class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity"
               >
-                VERIFIED WIN
+                <i
+                  class="fa-solid fa-magnifying-glass-plus text-white text-3xl"
+                ></i>
               </div>
-            </div>
-            <p class="text-slate-600 leading-relaxed mb-6 italic">
-              "Profits secured! Thanks Coach Noel for the signals. $50 to $125
-              in just 2 days! 🔥"
-            </p>
-            <div
-              class="mt-auto pt-6 border-t border-slate-50 flex items-center justify-between text-slate-400"
-            >
-              <div class="flex gap-4">
-                <span class="flex items-center gap-1.5 text-xs font-bold"
-                  ><i class="fa-regular fa-heart"></i> 24</span
-                >
-                <span class="flex items-center gap-1.5 text-xs font-bold"
-                  ><i class="fa-regular fa-comment"></i> 8</span
-                >
-              </div>
-              <i class="fa-solid fa-share-nodes text-xs"></i>
             </div>
           </div>
 
-          <!-- Card 2 -->
           <div
-            class="bg-white rounded-3xl p-6 shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col"
+            class="group bg-white p-3 rounded-3xl shadow-md hover:shadow-xl transition-all cursor-pointer border border-slate-100"
+            onclick="openLightbox('assets/results/2.jpg')"
           >
-            <div class="flex items-center gap-4 mb-6">
-              <img
-                src="https://picsum.photos/seed/user2/100/100"
-                alt="User"
-                class="w-12 h-12 rounded-full object-cover border-2 border-blue-50"
-              />
-              <div>
-                <h4 class="font-bold text-primary">Sarah Lim</h4>
-                <p
-                  class="text-[10px] text-slate-400 font-bold uppercase tracking-widest"
-                >
-                  March 25, 2026
-                </p>
-              </div>
-            </div>
             <div
-              class="aspect-video rounded-2xl overflow-hidden mb-6 bg-slate-100 relative group"
+              class="relative overflow-hidden rounded-2xl bg-slate-900 aspect-[3/4] flex items-center justify-center"
             >
               <img
-                src="https://picsum.photos/seed/chart2/600/400"
-                alt="Trade"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src="assets/results/2.jpg"
+                alt="Result"
+                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
               />
               <div
-                class="absolute top-4 right-4 px-3 py-1 bg-green-500 text-white text-[10px] font-bold rounded-full shadow-lg"
+                class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity"
               >
-                VERIFIED WIN
+                <i
+                  class="fa-solid fa-magnifying-glass-plus text-white text-3xl"
+                ></i>
               </div>
-            </div>
-            <p class="text-slate-600 leading-relaxed mb-6 italic">
-              "The AI tools are a game changer. Finally consistent results.
-              Quantum Family is the best!"
-            </p>
-            <div
-              class="mt-auto pt-6 border-t border-slate-50 flex items-center justify-between text-slate-400"
-            >
-              <div class="flex gap-4">
-                <span class="flex items-center gap-1.5 text-xs font-bold"
-                  ><i class="fa-regular fa-heart"></i> 42</span
-                >
-                <span class="flex items-center gap-1.5 text-xs font-bold"
-                  ><i class="fa-regular fa-comment"></i> 12</span
-                >
-              </div>
-              <i class="fa-solid fa-share-nodes text-xs"></i>
             </div>
           </div>
 
-          <!-- Card 3 -->
           <div
-            class="bg-white rounded-3xl p-6 shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col"
+            class="group bg-white p-3 rounded-3xl shadow-md hover:shadow-xl transition-all cursor-pointer border border-slate-100"
+            onclick="openLightbox('assets/results/3.jpg')"
           >
-            <div class="flex items-center gap-4 mb-6">
-              <img
-                src="https://picsum.photos/seed/user3/100/100"
-                alt="User"
-                class="w-12 h-12 rounded-full object-cover border-2 border-blue-50"
-              />
-              <div>
-                <h4 class="font-bold text-primary">Maria Santos</h4>
-                <p
-                  class="text-[10px] text-slate-400 font-bold uppercase tracking-widest"
-                >
-                  March 22, 2026
-                </p>
-              </div>
-            </div>
             <div
-              class="aspect-video rounded-2xl overflow-hidden mb-6 bg-slate-100 relative group"
+              class="relative overflow-hidden rounded-2xl bg-slate-900 aspect-[3/4] flex items-center justify-center"
             >
               <img
-                src="https://picsum.photos/seed/chart3/600/400"
-                alt="Trade"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src="assets/results/3.jpg"
+                alt="Meetup"
+                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
               />
               <div
-                class="absolute top-4 right-4 px-3 py-1 bg-green-500 text-white text-[10px] font-bold rounded-full shadow-lg"
+                class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity"
               >
-                VERIFIED WIN
+                <i
+                  class="fa-solid fa-magnifying-glass-plus text-white text-3xl"
+                ></i>
               </div>
             </div>
-            <p class="text-slate-600 leading-relaxed mb-6 italic">
-              "Started with $100 and now growing my account steadily. Thank you
-              Coach Noel for the guidance."
-            </p>
+          </div>
+
+          <div
+            class="group bg-white p-3 rounded-3xl shadow-md hover:shadow-xl transition-all cursor-pointer border border-slate-100"
+            onclick="openLightbox('assets/results/4.jpg')"
+          >
             <div
-              class="mt-auto pt-6 border-t border-slate-50 flex items-center justify-between text-slate-400"
+              class="relative overflow-hidden rounded-2xl bg-slate-900 aspect-[3/4] flex items-center justify-center"
             >
-              <div class="flex gap-4">
-                <span class="flex items-center gap-1.5 text-xs font-bold"
-                  ><i class="fa-regular fa-heart"></i> 38</span
-                >
-                <span class="flex items-center gap-1.5 text-xs font-bold"
-                  ><i class="fa-regular fa-comment"></i> 15</span
-                >
+              <img
+                src="assets/results/4.jpg"
+                alt="Result"
+                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity"
+              >
+                <i
+                  class="fa-solid fa-magnifying-glass-plus text-white text-3xl"
+                ></i>
               </div>
-              <i class="fa-solid fa-share-nodes text-xs"></i>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white p-3 rounded-3xl shadow-md hover:shadow-xl transition-all cursor-pointer border border-slate-100"
+            onclick="openLightbox('assets/results/5.jpg')"
+          >
+            <div
+              class="relative overflow-hidden rounded-2xl bg-slate-900 aspect-[3/4] flex items-center justify-center"
+            >
+              <img
+                src="assets/results/5.jpg"
+                alt="Meetup"
+                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity"
+              >
+                <i
+                  class="fa-solid fa-magnifying-glass-plus text-white text-3xl"
+                ></i>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white p-3 rounded-3xl shadow-md hover:shadow-xl transition-all cursor-pointer border border-slate-100"
+            onclick="openLightbox('assets/results/5.jpg')"
+          >
+            <div
+              class="relative overflow-hidden rounded-2xl bg-slate-900 aspect-[3/4] flex items-center justify-center"
+            >
+              <img
+                src="assets/results/5.jpg"
+                alt="Meetup"
+                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity"
+              >
+                <i
+                  class="fa-solid fa-magnifying-glass-plus text-white text-3xl"
+                ></i>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white p-3 rounded-3xl shadow-md hover:shadow-xl transition-all cursor-pointer border border-slate-100"
+            onclick="openLightbox('assets/results/6.jpg')"
+          >
+            <div
+              class="relative overflow-hidden rounded-2xl bg-slate-900 aspect-[3/4] flex items-center justify-center"
+            >
+              <img
+                src="assets/results/6.jpg"
+                alt="Meetup"
+                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity"
+              >
+                <i
+                  class="fa-solid fa-magnifying-glass-plus text-white text-3xl"
+                ></i>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white p-3 rounded-3xl shadow-md hover:shadow-xl transition-all cursor-pointer border border-slate-100"
+            onclick="openLightbox('assets/meetups/1.jpg')"
+          >
+            <div
+              class="relative overflow-hidden rounded-2xl bg-slate-900 aspect-[3/4] flex items-center justify-center"
+            >
+              <img
+                src="assets/meetups/1.jpg"
+                alt="Meetup"
+                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity"
+              >
+                <i
+                  class="fa-solid fa-magnifying-glass-plus text-white text-3xl"
+                ></i>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white p-3 rounded-3xl shadow-md hover:shadow-xl transition-all cursor-pointer border border-slate-100"
+            onclick="openLightbox('assets/meetups/2.jpg')"
+          >
+            <div
+              class="relative overflow-hidden rounded-2xl bg-slate-900 aspect-[3/4] flex items-center justify-center"
+            >
+              <img
+                src="assets/meetups/2.jpg"
+                alt="Meetup"
+                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity"
+              >
+                <i
+                  class="fa-solid fa-magnifying-glass-plus text-white text-3xl"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="group bg-white p-3 rounded-3xl shadow-md hover:shadow-xl transition-all cursor-pointer border border-slate-100"
+            onclick="openLightbox('assets/meetups/3.jpg')"
+          >
+            <div
+              class="relative overflow-hidden rounded-2xl bg-slate-900 aspect-[3/4] flex items-center justify-center"
+            >
+              <img
+                src="assets/meetups/3.jpg"
+                alt="Meetup"
+                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity"
+              >
+                <i
+                  class="fa-solid fa-magnifying-glass-plus text-white text-3xl"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="group bg-white p-3 rounded-3xl shadow-md hover:shadow-xl transition-all cursor-pointer border border-slate-100"
+            onclick="openLightbox('assets/meetups/4.jpg')"
+          >
+            <div
+              class="relative overflow-hidden rounded-2xl bg-slate-900 aspect-[3/4] flex items-center justify-center"
+            >
+              <img
+                src="assets/meetups/4.jpg"
+                alt="Meetup"
+                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity"
+              >
+                <i
+                  class="fa-solid fa-magnifying-glass-plus text-white text-3xl"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="group bg-white p-3 rounded-3xl shadow-md hover:shadow-xl transition-all cursor-pointer border border-slate-100"
+            onclick="openLightbox('assets/meetups/5.jpg')"
+          >
+            <div
+              class="relative overflow-hidden rounded-2xl bg-slate-900 aspect-[3/4] flex items-center justify-center"
+            >
+              <img
+                src="assets/meetups/5.jpg"
+                alt="Meetup"
+                class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity"
+              >
+                <i
+                  class="fa-solid fa-magnifying-glass-plus text-white text-3xl"
+                ></i>
+              </div>
             </div>
           </div>
         </div>
@@ -288,304 +382,134 @@
             target="_blank"
             class="inline-flex items-center gap-3 px-10 py-5 border-2 border-primary text-primary rounded-2xl font-bold uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-all"
           >
-            <i class="fa-brands fa-facebook"></i>
-            VIEW MORE PROOF ON FACEBOOK
+            <i class="fa-brands fa-facebook"></i> VIEW MORE ON FACEBOOK
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-12 border-t border-slate-100 text-center">
       <p
         class="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em]"
       >
-        MarkDev &copy; 2026 NOEL ORPINEDA - QUANTUM ACADEMY. ALL RIGHTS
-        RESERVED.
+        MarkDev &copy; 2026 NOEL ORPINEDA - QUANTUM ACADEMY.
       </p>
     </footer>
 
-    <!-- Floating Messenger Icon -->
-    <a
-      href="https://m.me/NoelPvPrimeverse"
-      target="_blank"
-      class="fixed bottom-8 right-8 z-50 w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center shadow-2xl shadow-blue-900/40 hover:bg-accent transition-all transform hover:scale-110 active:scale-95"
+    <div
+      id="lightbox"
+      class="fixed inset-0 z-[200] hidden bg-slate-950/95 backdrop-blur-sm items-center justify-center p-4 md:p-10 cursor-pointer"
+      onclick="closeLightbox()"
     >
-      <i class="fa-brands fa-facebook-messenger text-3xl"></i>
-    </a>
+      <button
+        class="absolute top-6 right-6 md:top-10 md:right-10 text-white/50 hover:text-white text-4xl"
+      >
+        &times;
+      </button>
+      <img
+        id="lightbox-img"
+        src=""
+        alt="Enlarged"
+        class="max-w-full max-h-[90vh] rounded-lg shadow-2xl transition-all duration-300"
+      />
+    </div>
 
-    <!-- Multi-Step Onboarding Modal -->
     <div
       id="application-modal"
       class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm"
     >
       <div
-        class="bg-white w-full max-w-2xl rounded-[2.5rem] shadow-2xl overflow-hidden relative animate-in fade-in zoom-in duration-300"
+        class="bg-white w-full max-w-2xl rounded-[2.5rem] shadow-2xl overflow-hidden relative"
       >
-        <!-- Close Button -->
         <button
           id="close-modal"
-          class="absolute top-8 right-8 text-slate-400 hover:text-primary transition-colors z-10"
+          class="absolute top-8 right-8 text-slate-400 hover:text-primary z-10"
         >
           <i class="fa-solid fa-xmark text-2xl"></i>
         </button>
-
-        <!-- Step 1: Instructions -->
         <div id="modal-step-1" class="p-8 md:p-12">
-          <div class="mb-10">
-            <span
-              class="inline-block px-4 py-1.5 bg-blue-50 text-primary text-[10px] font-bold uppercase tracking-widest rounded-full mb-4"
-              >Step 01/03</span
-            >
-            <h2
-              class="text-3xl md:text-4xl font-poppins font-extrabold text-primary leading-tight"
-            >
-              Setup Your Account
-            </h2>
-            <p class="text-slate-500 mt-4 text-lg">
-              Choose your preferred broker to begin your journey.
-            </p>
-          </div>
-
+          <span
+            class="inline-block px-4 py-1.5 bg-blue-50 text-primary text-[10px] font-bold uppercase tracking-widest rounded-full mb-4"
+            >Step 01/03</span
+          >
+          <h2
+            class="text-3xl font-poppins font-extrabold text-primary leading-tight mb-8"
+          >
+            Setup Your Account
+          </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-            <!-- VT Markets -->
             <div
               class="p-6 rounded-3xl border-2 border-slate-100 bg-slate-50/50"
             >
-              <div class="flex items-center justify-between mb-4">
-                <span class="font-bold text-primary">VT Markets</span>
-                <i class="fa-solid fa-shield-check text-accent"></i>
-              </div>
-              <p class="text-xs text-slate-500 mb-4">Best for PH Residents</p>
-              <div
-                class="bg-white px-4 py-2 rounded-xl border border-slate-100 flex items-center justify-between mb-4"
-              >
-                <span class="text-[10px] font-mono text-slate-400">CODE:</span>
-                <span class="text-xs font-bold text-primary">3Hrt16bK</span>
-              </div>
+              <span class="font-bold text-primary block mb-2">VT Markets</span>
+              <p class="text-[10px] text-slate-500 mb-4 tracking-widest">
+                CODE: 3Hrt16bK
+              </p>
               <a
                 href="https://vtm.pro/2qAzqi"
                 target="_blank"
-                class="text-xs font-bold text-accent hover:underline"
+                class="text-xs font-bold text-accent"
                 >Register Now →</a
               >
             </div>
-
-            <!-- PU Prime -->
             <div
               class="p-6 rounded-3xl border-2 border-slate-100 bg-slate-50/50"
             >
-              <div class="flex items-center justify-between mb-4">
-                <span class="font-bold text-primary">PU Prime</span>
-                <i class="fa-solid fa-globe text-accent"></i>
-              </div>
-              <p class="text-xs text-slate-500 mb-4">International Clients</p>
-              <div
-                class="bg-white px-4 py-2 rounded-xl border border-slate-100 flex items-center justify-between mb-4"
-              >
-                <span class="text-[10px] font-mono text-slate-400">CODE:</span>
-                <span class="text-xs font-bold text-primary">Yos6nGOt</span>
-              </div>
+              <span class="font-bold text-primary block mb-2">PU Prime</span>
+              <p class="text-[10px] text-slate-500 mb-4 tracking-widest">
+                CODE: Yos6nGOt
+              </p>
               <a
                 href="https://puvip.co/aMjyAr"
                 target="_blank"
-                class="text-xs font-bold text-accent hover:underline"
+                class="text-xs font-bold text-accent"
                 >Register Now →</a
               >
             </div>
           </div>
-
           <button
             id="next-to-step-2"
-            class="btn-enroll w-full py-5 rounded-2xl font-bold uppercase tracking-[0.2em] text-xs shadow-xl shadow-blue-900/20"
+            class="btn-enroll w-full py-5 rounded-2xl font-bold uppercase tracking-widest text-xs"
           >
             I HAVE CREATED MY ACCOUNT
-          </button>
-        </div>
-
-        <!-- Step 2: Application Form -->
-        <div id="modal-step-2" class="p-8 md:p-12 hidden">
-          <div class="mb-10">
-            <span
-              class="inline-block px-4 py-1.5 bg-blue-50 text-primary text-[10px] font-bold uppercase tracking-widest rounded-full mb-4"
-              >Step 02/03</span
-            >
-            <h2
-              class="text-3xl md:text-4xl font-poppins font-extrabold text-primary leading-tight"
-            >
-              Initiate Protocol
-            </h2>
-            <p class="text-slate-500 mt-4 text-lg">
-              Provide your details to finalize your application.
-            </p>
-          </div>
-
-          <form id="application-form" class="space-y-6">
-            <div>
-              <label
-                class="block text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3 ml-1"
-                >Full Name</label
-              >
-              <input
-                type="text"
-                name="name"
-                required
-                placeholder="Enter your full name"
-                class="w-full px-6 py-4 rounded-2xl bg-slate-50 border-2 border-slate-100 focus:border-primary focus:bg-white outline-none transition-all text-slate-700 font-medium"
-              />
-            </div>
-            <div>
-              <label
-                class="block text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3 ml-1"
-                >Email Address</label
-              >
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="your@email.com"
-                class="w-full px-6 py-4 rounded-2xl bg-slate-50 border-2 border-slate-100 focus:border-primary focus:bg-white outline-none transition-all text-slate-700 font-medium"
-              />
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label
-                  class="block text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3 ml-1"
-                  >Broker Choice</label
-                >
-                <select
-                  name="broker"
-                  required
-                  class="w-full px-6 py-4 rounded-2xl bg-slate-50 border-2 border-slate-100 focus:border-primary focus:bg-white outline-none transition-all text-slate-700 font-medium appearance-none"
-                >
-                  <option value="">Select Broker</option>
-                  <option value="VT Markets">VT Markets</option>
-                  <option value="PU Prime">PU Prime</option>
-                </select>
-              </div>
-              <div>
-                <label
-                  class="block text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3 ml-1"
-                  >Starting Capital</label
-                >
-                <select
-                  name="capital"
-                  required
-                  class="w-full px-6 py-4 rounded-2xl bg-slate-50 border-2 border-slate-100 focus:border-primary focus:bg-white outline-none transition-all text-slate-700 font-medium appearance-none"
-                >
-                  <option value="">Select Range</option>
-                  <option value="50-100">$50 - $100</option>
-                  <option value="101-500">$101 - $500</option>
-                  <option value="501+">$501+</option>
-                </select>
-              </div>
-            </div>
-
-            <button
-              type="submit"
-              class="btn-enroll w-full py-5 rounded-2xl font-bold uppercase tracking-[0.2em] text-xs shadow-xl shadow-blue-900/20 mt-4"
-            >
-              INITIATE PROTOCOL
-            </button>
-          </form>
-        </div>
-
-        <!-- Step 3: Success -->
-        <div id="modal-step-3" class="p-8 md:p-12 hidden text-center">
-          <div
-            class="w-24 h-24 bg-blue-50 text-primary rounded-3xl mx-auto mb-10 flex items-center justify-center shadow-xl shadow-blue-900/5 relative"
-          >
-            <div
-              class="absolute inset-0 bg-accent rounded-3xl blur-2xl opacity-20 animate-pulse"
-            ></div>
-            <i class="fa-solid fa-unlock-keyhole text-4xl relative z-10"></i>
-          </div>
-
-          <h2
-            class="text-3xl md:text-4xl font-poppins font-extrabold text-primary mb-4"
-          >
-            Access Granted!
-          </h2>
-          <p class="text-slate-500 text-lg mb-10">
-            Your protocol has been initiated. Complete the final steps below.
-          </p>
-
-          <div class="space-y-4 mb-12">
-            <a
-              href="https://forms.gle/EVW1inzJ9S2FydRb7"
-              target="_blank"
-              class="flex items-center justify-between p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary transition-all group"
-            >
-              <div class="flex items-center gap-4">
-                <div
-                  class="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm"
-                >
-                  <i class="fa-solid fa-file-signature text-primary"></i>
-                </div>
-                <span class="font-bold text-slate-700"
-                  >Register via Google Form</span
-                >
-              </div>
-              <i
-                class="fa-solid fa-chevron-right text-slate-300 group-hover:text-primary transition-colors"
-              ></i>
-            </a>
-
-            <a
-              href="https://prime-verse.mn.co/plans/1932009"
-              target="_blank"
-              class="flex items-center justify-between p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary transition-all group"
-            >
-              <div class="flex items-center gap-4">
-                <div
-                  class="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm"
-                >
-                  <i class="fa-solid fa-users text-primary"></i>
-                </div>
-                <span class="font-bold text-slate-700"
-                  >Join Mighty Networks</span
-                >
-              </div>
-              <i
-                class="fa-solid fa-chevron-right text-slate-300 group-hover:text-primary transition-colors"
-              ></i>
-            </a>
-
-            <a
-              href="https://m.me/ch/AbaWanTuJ_NQ-823/"
-              target="_blank"
-              class="flex items-center justify-between p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary transition-all group"
-            >
-              <div class="flex items-center gap-4">
-                <div
-                  class="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm"
-                >
-                  <i class="fa-brands fa-facebook-messenger text-primary"></i>
-                </div>
-                <span class="font-bold text-slate-700"
-                  >Join Messenger Group Chat</span
-                >
-              </div>
-              <i
-                class="fa-solid fa-chevron-right text-slate-300 group-hover:text-primary transition-colors"
-              ></i>
-            </a>
-          </div>
-
-          <button
-            id="success-close"
-            class="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 hover:text-primary transition-colors"
-          >
-            Return to Academy
           </button>
         </div>
       </div>
     </div>
 
-    <!-- Scripts -->
-    <script type="module">
-      import { initModal } from "./js/modal.js";
-      document.addEventListener("DOMContentLoaded", initModal);
+    <script>
+      // Existing Modal Logic
+      const modal = document.getElementById("application-modal");
+      document.querySelectorAll(".open-modal-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+        });
+      });
+      document.getElementById("close-modal").onclick = () =>
+        modal.classList.add("hidden");
+
+      // LIGHTBOX LOGIC
+      function openLightbox(src) {
+        const lb = document.getElementById("lightbox");
+        const lbImg = document.getElementById("lightbox-img");
+        lbImg.src = src;
+        lb.classList.remove("hidden");
+        lb.classList.add("flex");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        const lb = document.getElementById("lightbox");
+        lb.classList.add("hidden");
+        lb.classList.remove("flex");
+        document.body.style.overflow = "auto";
+      }
+
+      // Close on Esc key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
+      });
     </script>
   </body>
 </html>
